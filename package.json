@@ -1,0 +1,14 @@
+
+{
+  "name": "kj-royal-digital-empire",
+  "version": "1.0.0",
+  "description": "KJ ROYAL DIGITAL EMPIRE - Digital Products Marketplace",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "dotenv": "^16.4.7"
+  }
+}
