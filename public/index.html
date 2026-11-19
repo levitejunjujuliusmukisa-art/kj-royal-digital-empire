@@ -246,8 +246,16 @@ function checkout(){
   alert("Your shopping cart is empty.");
   return;
  }
- alert("Your cart is ready! Online checkout and payment will be connected in the next stage.");
-}
+
+ const total = cart.reduce((sum,item)=>sum+(item.price*item.quantity),0);
+
+ alert(
+  "KJ ROYAL DIGITAL EMPIRE\n\n"+
+  "Your order has been received!\n"+
+  "Total: UGX "+total.toLocaleString()+"\n\n"+
+  "Payment integration is coming soon. Please do not send money yet."
+ );
+ }
 
 let selectedCategory="all";
 
