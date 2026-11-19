@@ -1,36 +1,54 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KJ ROYAL DIGITAL EMPIRE</title>
-<meta name="description" content="Shop premium digital products at KJ ROYAL DIGITAL EMPIRE.">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#0b0b0b;color:#fff}
-header{background:#111;padding:20px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #b58b32;flex-wrap:wrap;gap:15px}
-.logo{color:#e4b84d;font-size:22px;font-weight:bold}
-nav a{color:white;text-decoration:none;margin:0 10px;font-size:14px}
-.hero{text-align:center;padding:85px 20px;background:linear-gradient(135deg,#171717,#30230d)}
-.hero h1{font-size:38px;color:#e4b84d;margin-bottom:18px}
-.hero p{color:#ddd;font-size:17px;line-height:1.7}
-.btn{display:inline-block;background:#d9ad42;color:#111;padding:13px 24px;border-radius:5px;text-decoration:none;font-weight:bold;margin-top:22px;border:none;cursor:pointer}
+body{font-family:Arial,sans-serif;background:#090909;color:white}
+header{background:#151515;padding:20px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;border-bottom:2px solid #c69b35}
+.logo{color:#e5bb57;font-size:20px;font-weight:bold}
+nav{display:flex;gap:18px;align-items:center}
+nav a{color:white;text-decoration:none}
+button{cursor:pointer}
+.hero{text-align:center;padding:75px 20px;background:linear-gradient(135deg,#171717,#493512)}
+.hero h1{color:#f2c75e;font-size:35px;margin-bottom:18px}
+.hero p{line-height:1.7;color:#eee}
+.btn,.buy{background:#d9ad42;color:#111;border:0;padding:13px 20px;border-radius:5px;font-weight:bold;display:inline-block;text-decoration:none;margin-top:20px}
 .container{padding:45px 6%}
-.heading{text-align:center;color:#e4b84d;font-size:28px;margin-bottom:25px}
-.search{display:block;width:100%;max-width:550px;margin:0 auto 30px;padding:15px;border-radius:6px;border:1px solid #777;background:#191919;color:white}
-.categories{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:35px}
-.category{padding:11px 18px;background:#1c1c1c;border:1px solid #a98432;border-radius:25px;color:#fff;cursor:pointer}
-.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
-.card{background:#171717;border:1px solid #38302a;border-radius:9px;overflow:hidden;padding:20px}
-.product-icon{font-size:48px;text-align:center;padding:22px;background:#242019;border-radius:6px}
-.card h3{color:#e4b84d;margin:17px 0 10px}
-.card p{color:#ccc;line-height:1.6;font-size:14px}
-.price{font-size:19px;font-weight:bold;margin-top:14px}
-.buy{display:block;text-align:center;background:#d9ad42;color:#111;text-decoration:none;padding:12px;margin-top:15px;border-radius:5px;font-weight:bold}
-.info{background:#151515;text-align:center;padding:40px 20px;margin-top:30px}
-footer{text-align:center;padding:25px;background:#080808;color:#aaa;border-top:1px solid #333}
-@media(max-width:600px){.hero h1{font-size:29px}header{justify-content:center}nav{text-align:center}nav a{display:inline-block;margin:7px}}
+.heading{text-align:center;color:#e5bb57;margin-bottom:25px;font-size:27px}
+.search{display:block;width:100%;max-width:600px;margin:0 auto 25px;padding:15px;background:#1b1b1b;color:white;border:1px solid #9c782e;border-radius:6px}
+.categories{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+.category{background:#222;color:white;border:1px solid #a77f2c;padding:11px 17px;border-radius:25px}
+.category.active{background:#d9ad42;color:#111}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#171717;border:1px solid #554323;border-radius:9px;padding:18px}
+.product-icon{text-align:center;font-size:55px;padding:25px;background:#292319;border-radius:7px}
+.card h3{color:#e5bb57;margin:15px 0 10px}
+.card p{color:#ccc;line-height:1.5;font-size:14px;min-height:42px}
+.price{font-size:20px;font-weight:bold;margin-top:15px}
+.buy{width:100%;margin-top:15px}
+.buy:hover,.btn:hover{background:#f2cc68}
+.cart-section{background:#171717;padding:25px;border:1px solid #bd9137;border-radius:8px;margin-top:30px}
+.cart-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:13px 0;border-bottom:1px solid #444;flex-wrap:wrap}
+.cart-row button{background:#a33;color:white;border:0;padding:7px 12px;border-radius:4px}
+.cart-total{font-size:22px;color:#f2c75e;margin-top:20px;font-weight:bold}
+.cart-actions{display:flex;gap:10px;flex-wrap:wrap}
+.cart-actions button{padding:12px 18px;border:0;border-radius:5px;font-weight:bold}
+.checkout{background:#d9ad42;color:#111}
+.clear{background:#444;color:white}
+.info{text-align:center;padding:40px 20px;background:#151515;margin-top:30px}
+footer{text-align:center;padding:25px;color:#aaa;background:#080808}
+.empty{text-align:center;color:#aaa;padding:20px}
+.hidden{display:none}
+@media(max-width:600px){
+header{justify-content:center}
+nav{justify-content:center;flex-wrap:wrap}
+.hero h1{font-size:27px}
+}
 </style>
 </head>
 <body>
@@ -40,30 +58,30 @@ footer{text-align:center;padding:25px;background:#080808;color:#aaa;border-top:1
 <nav>
 <a href="#home">Home</a>
 <a href="#products">Products</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
+<a href="#cart">Cart 🛒 <span id="cartCount">0</span></a>
 </nav>
 </header>
 
 <section class="hero" id="home">
 <h1>WELCOME TO KJ ROYAL DIGITAL EMPIRE</h1>
 <p>Your royal destination for premium digital products.<br>
-Discover, purchase and download digital products with ease.</p>
+Discover, shop and download digital products with ease.</p>
 <a href="#products" class="btn">EXPLORE PRODUCTS</a>
 </section>
 
 <section class="container" id="products">
 <h2 class="heading">OUR DIGITAL MARKETPLACE</h2>
 
-<input class="search" id="search" type="search" placeholder="Search digital products...">
+<input id="search" class="search" type="search"
+placeholder="Search for digital products...">
 
 <div class="categories">
-<button class="category" onclick="filterProducts('all')">All Products</button>
-<button class="category" onclick="filterProducts('ebooks')">E-books</button>
-<button class="category" onclick="filterProducts('graphics')">Graphics</button>
-<button class="category" onclick="filterProducts('courses')">Courses</button>
-<button class="category" onclick="filterProducts('templates')">Templates</button>
-<button class="category" onclick="filterProducts('software')">Software</button>
+<button class="category active" data-filter="all">All Products</button>
+<button class="category" data-filter="ebooks">E-books</button>
+<button class="category" data-filter="graphics">Graphics</button>
+<button class="category" data-filter="courses">Courses</button>
+<button class="category" data-filter="templates">Templates</button>
+<button class="category" data-filter="software">Software</button>
 </div>
 
 <div class="products" id="productList">
@@ -71,17 +89,17 @@ Discover, purchase and download digital products with ease.</p>
 <div class="card" data-category="ebooks">
 <div class="product-icon">📚</div>
 <h3>Business E-books</h3>
-<p>Discover useful digital business guides and learning materials.</p>
+<p>Digital business guides and learning materials.</p>
 <div class="price">UGX 5,000</div>
-<a href="#contact" class="buy">View Product</a>
+<button class="buy" onclick="addToCart('Business E-books',5000)">ADD TO CART</button>
 </div>
 
 <div class="card" data-category="graphics">
 <div class="product-icon">🎨</div>
 <h3>Graphic Design Packs</h3>
-<p>Creative design resources for your business and social media.</p>
+<p>Creative resources for business and social media.</p>
 <div class="price">UGX 10,000</div>
-<a href="#contact" class="buy">View Product</a>
+<button class="buy" onclick="addToCart('Graphic Design Packs',10000)">ADD TO CART</button>
 </div>
 
 <div class="card" data-category="courses">
@@ -89,7 +107,7 @@ Discover, purchase and download digital products with ease.</p>
 <h3>Online Learning</h3>
 <p>Educational materials to improve your digital skills.</p>
 <div class="price">UGX 15,000</div>
-<a href="#contact" class="buy">View Product</a>
+<button class="buy" onclick="addToCart('Online Learning',15000)">ADD TO CART</button>
 </div>
 
 <div class="card" data-category="templates">
@@ -97,7 +115,7 @@ Discover, purchase and download digital products with ease.</p>
 <h3>Website Templates</h3>
 <p>Ready-to-customize website design templates.</p>
 <div class="price">UGX 20,000</div>
-<a href="#contact" class="buy">View Product</a>
+<button class="buy" onclick="addToCart('Website Templates',20000)">ADD TO CART</button>
 </div>
 
 <div class="card" data-category="software">
@@ -105,47 +123,163 @@ Discover, purchase and download digital products with ease.</p>
 <h3>Digital Tools</h3>
 <p>Useful digital tools and productivity resources.</p>
 <div class="price">UGX 25,000</div>
-<a href="#contact" class="buy">View Product</a>
+<button class="buy" onclick="addToCart('Digital Tools',25000)">ADD TO CART</button>
 </div>
 
+</div>
+<p id="noResults" class="empty hidden">No products found.</p>
+</section>
+
+<section class="container" id="cart">
+<h2 class="heading">YOUR SHOPPING CART 🛒</h2>
+<div class="cart-section">
+<div id="cartItems">
+<p class="empty">Your shopping cart is empty.</p>
+</div>
+<div class="cart-total">TOTAL: UGX <span id="cartTotal">0</span></div>
+<div class="cart-actions">
+<button class="checkout" onclick="checkout()">PROCEED TO CHECKOUT</button>
+<button class="clear" onclick="clearCart()">CLEAR CART</button>
+</div>
+<p style="color:#aaa;font-size:12px;margin-top:15px">
+Checkout and payment integration will be activated in the next development stage.
+</p>
 </div>
 </section>
 
 <section class="info" id="about">
 <h2 class="heading">ABOUT OUR EMPIRE</h2>
-<p>We connect digital creators with customers through a growing online marketplace.</p>
-<p style="margin-top:15px">Buy digital products and discover opportunities to sell your own creations.</p>
+<p>Connecting digital creators with customers through a growing digital marketplace.</p>
 </section>
 
 <section class="info" id="contact">
 <h2 class="heading">CONTACT US</h2>
-<p>Welcome to KJ ROYAL DIGITAL EMPIRE.</p>
-<p>Customer support and seller enquiries coming soon.</p>
+<p>KJ ROYAL DIGITAL EMPIRE</p>
+<p>Customer support coming soon.</p>
 </section>
 
 <footer>
 <p>© 2026 KJ ROYAL DIGITAL EMPIRE. All Rights Reserved.</p>
-<p style="margin-top:10px">Your Royal Digital Marketplace.</p>
 </footer>
 
 <script>
-const searchInput = document.getElementById("search");
+let cart = JSON.parse(localStorage.getItem("kjRoyalCart") || "[]");
 
-function filterProducts(category){
- document.querySelectorAll(".card").forEach(card=>{
-  card.style.display =
-   category === "all" || card.dataset.category === category
-   ? "block" : "none";
- });
+function saveCart(){
+ localStorage.setItem("kjRoyalCart",JSON.stringify(cart));
+ renderCart();
 }
 
-searchInput.addEventListener("input",function(){
- const value=this.value.toLowerCase();
+function addToCart(name,price){
+ let item=cart.find(p=>p.name===name);
+ if(item){
+  item.quantity++;
+ }else{
+  cart.push({name,price,quantity:1});
+ }
+ saveCart();
+ alert(name+" added to your cart!");
+}
+
+function renderCart(){
+ const container=document.getElementById("cartItems");
+ let total=0;
+ let count=0;
+
+ if(cart.length===0){
+  container.innerHTML='<p class="empty">Your shopping cart is empty.</p>';
+ }else{
+  container.innerHTML="";
+  cart.forEach((item,index)=>{
+   total+=item.price*item.quantity;
+   count+=item.quantity;
+
+   const row=document.createElement("div");
+   row.className="cart-row";
+
+   const name=document.createElement("span");
+   name.textContent=item.name+" - UGX "+item.price.toLocaleString()+" × "+item.quantity;
+
+   const remove=document.createElement("button");
+   remove.textContent="REMOVE";
+   remove.onclick=()=>removeItem(index);
+
+   const controls=document.createElement("span");
+   controls.style.display="flex";
+   controls.style.gap="8px";
+
+   const minus=document.createElement("button");
+   minus.textContent="-";
+   minus.onclick=()=>changeQuantity(index,-1);
+
+   const plus=document.createElement("button");
+   plus.textContent="+";
+   plus.onclick=()=>changeQuantity(index,1);
+   plus.style.background="#276b38";
+
+   controls.append(minus,plus,remove);
+   row.append(name,controls);
+   container.appendChild(row);
+  });
+ }
+
+ document.getElementById("cartTotal").textContent=total.toLocaleString();
+ document.getElementById("cartCount").textContent=count;
+}
+
+function changeQuantity(index,change){
+ cart[index].quantity+=change;
+ if(cart[index].quantity<=0)cart.splice(index,1);
+ saveCart();
+}
+
+function removeItem(index){
+ cart.splice(index,1);
+ saveCart();
+}
+
+function clearCart(){
+ cart=[];
+ saveCart();
+}
+
+function checkout(){
+ if(cart.length===0){
+  alert("Your shopping cart is empty.");
+  return;
+ }
+ alert("Your cart is ready! Online checkout and payment will be connected in the next stage.");
+}
+
+let selectedCategory="all";
+
+function filterProducts(){
+ const search=document.getElementById("search").value.toLowerCase();
+ let visible=0;
+
  document.querySelectorAll(".card").forEach(card=>{
-  card.style.display=card.innerText.toLowerCase().includes(value)
-   ? "block":"none";
+  const matchesCategory=selectedCategory==="all"||card.dataset.category===selectedCategory;
+  const matchesSearch=card.innerText.toLowerCase().includes(search);
+  const show=matchesCategory&&matchesSearch;
+  card.style.display=show?"block":"none";
+  if(show)visible++;
+ });
+
+ document.getElementById("noResults").classList.toggle("hidden",visible>0);
+}
+
+document.querySelectorAll(".category").forEach(button=>{
+ button.addEventListener("click",()=>{
+  selectedCategory=button.dataset.filter;
+  document.querySelectorAll(".category").forEach(b=>b.classList.remove("active"));
+  button.classList.add("active");
+  filterProducts();
  });
 });
+
+document.getElementById("search").addEventListener("input",filterProducts);
+
+renderCart();
 </script>
 
 </body>
